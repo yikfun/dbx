@@ -10437,7 +10437,8 @@ watch(
   top: 0;
   z-index: 10;
   min-width: var(--structure-column-table-width);
-  background: var(--background);
+  /* The sticky header must hide scrolling rows even when wallpaper makes surfaces translucent. */
+  background: var(--background-solid, var(--background));
 }
 
 .structure-column-virtual-scroller :deep(.structure-column-virtual-list) {
